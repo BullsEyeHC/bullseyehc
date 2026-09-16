@@ -1,0 +1,1 @@
+Repaired image assets are stored as valid WebP binaries and referenced by index.html.
