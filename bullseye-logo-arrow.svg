@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">BullsEye! Human Capital Solutions Inc. — Powered by ARROW</title>
+<desc id="desc">Transparent BullsEye! brand lockup with tagline Where precision meets people and Powered by ARROW.</desc>
+<g fill="none" fill-rule="evenodd">
+  <g transform="translate(18 14)">
+    <circle cx="420" cy="82" r="58" fill="#d91f2b"/>
+    <circle cx="420" cy="82" r="42" fill="#ffffff"/>
+    <circle cx="420" cy="82" r="27" fill="#d91f2b"/>
+    <circle cx="420" cy="82" r="13" fill="#ffffff"/>
+    <circle cx="420" cy="82" r="6" fill="#d91f2b"/>
+    <path d="M420 136 L447 188 L432 188 L432 284 L420 318 L408 284 L408 188 L393 188 Z" fill="#d91f2b"/>
+    <text x="0" y="222" font-family="Georgia,Times New Roman,serif" font-size="128" letter-spacing="2" fill="#ffffff">BULLS</text>
+    <text x="466" y="222" font-family="Georgia,Times New Roman,serif" font-size="128" letter-spacing="2" fill="#e0242e">EYE!</text>
+    <text x="34" y="274" font-family="Arial,Helvetica,sans-serif" font-size="30" letter-spacing="8" fill="#ffffff">HUMAN CAPITAL</text>
+    <text x="500" y="274" font-family="Arial,Helvetica,sans-serif" font-size="30" letter-spacing="7" fill="#ffffff">SOLUTIONS INC.</text>
+    <line x1="34" y1="300" x2="776" y2="300" stroke="#9aa1ad" stroke-width="2"/>
+    <text x="65" y="338" font-family="Arial,Helvetica,sans-serif" font-size="25" letter-spacing="9" fill="#c4c9d1">WHERE PRECISION MEETS PEOPLE</text>
+  </g>
+  <g transform="translate(905 98)">
+    <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="24" letter-spacing="5" fill="#aeb5c4">POWERED BY</text>
+    <path d="M0 34 L56 73 L0 112 Z" fill="#d91f2b" opacity=".95"/>
+    <path d="M7 47 L42 73 L7 99 Z" fill="#7d1320" opacity=".8"/>
+    <text x="72" y="94" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="700" letter-spacing="-3" fill="#ffffff">ARROW</text>
+  </g>
+</g>
+</svg>
