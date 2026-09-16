@@ -1,0 +1,63 @@
+name: Publish transparent BullsEye logo
+on:
+  push:
+    paths:
+      - '.github/workflows/make-transparent-logo.yml'
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Create transparent logo from approved dark-site asset
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          import math
+          src='bullseye-dark-approved.jpg'
+          dst='bullseye-transparent-approved.png'
+          im=Image.open(src).convert('RGBA')
+          px=im.load()
+          # Estimate the baked-in background from the four corners.
+          corners=[px[0,0][:3],px[im.width-1,0][:3],px[0,im.height-1][:3],px[im.width-1,im.height-1][:3]]
+          bg=tuple(sum(c[i] for c in corners)/4 for i in range(3))
+          for y in range(im.height):
+            for x in range(im.width):
+              r,g,b,a=px[x,y]
+              d=math.sqrt((r-bg[0])**2+(g-bg[1])**2+(b-bg[2])**2)
+              # Smoothly remove pixels matching the dark navy background while preserving logo edges.
+              if d <= 12:
+                na=0
+              elif d >= 42:
+                na=255
+              else:
+                na=int((d-12)/30*255)
+              px[x,y]=(r,g,b,na)
+          im.save(dst,'PNG',optimize=True)
+          PY
+      - name: Wire transparent asset into site
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          old='src="bullseye-dark-approved.jpg"'
+          new='src="bullseye-transparent-approved.png"'
+          if old not in s:
+              raise SystemExit('Expected current logo reference not found')
+          p.write_text(s.replace(old,new,1))
+          PY
+      - name: Remove obsolete dark asset and one-time workflow
+        run: |
+          rm -f bullseye-dark-approved.jpg
+          rm -f .github/workflows/make-transparent-logo.yml
+      - name: Commit
+        run: |
+          git config user.name "ARROW Control Room"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html bullseye-transparent-approved.png .github/workflows/make-transparent-logo.yml bullseye-dark-approved.jpg
+          git commit -m "Publish transparent BullsEye header logo"
+          git push origin main
