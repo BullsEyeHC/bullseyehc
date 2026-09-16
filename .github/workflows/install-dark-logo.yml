@@ -1,0 +1,39 @@
+name: Install approved dark-site logo
+on:
+  push:
+    paths:
+      - '.github/workflows/install-dark-logo.yml'
+permissions:
+  contents: write
+jobs:
+  install-logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Download approved logo
+        run: |
+          curl -L --fail --retry 3 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-c654-81f5-94d4-38a7425a4beb/raw?se=2026-09-16T20%3A22%3A35Z&sp=r&sv=2026-02-06&sr=b&scid=f28bea63-ed02-5aaa-973e-e7527ffa3f4f&skoid=add8ee7d-5fc7-451e-b06e-a82b2276cf62&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T19%3A40%3A04Z&ske=2026-09-17T19%3A40%3A04Z&sks=b&skv=2026-02-06&sig=dNqBrpV6bCW/wMs4BuqYJ35Al3tW1r8U/%2Bp9V3tc0nM%3D' -o bullseye-dark-approved.jpg
+          test "$(wc -c < bullseye-dark-approved.jpg)" -eq 62688
+          echo '8db0b0c3aaf715707d336fd1a95820b7b5e7a29516fa507278358c98e5785258  bullseye-dark-approved.jpg' | sha256sum -c -
+      - name: Wire new logo
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          old='src="bullseye-approved-logo.png"'
+          new='src="bullseye-dark-approved.jpg"'
+          if old not in s:
+              raise SystemExit('Current logo reference not found')
+          p.write_text(s.replace(old,new,1))
+      - name: Remove old logo and installer and commit
+        run: |
+          rm -f bullseye-approved-logo.png
+          rm -f .github/workflows/install-dark-logo.yml
+          git config user.name "ARROW Control Room"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish approved dark-site BullsEye logo"
+          git push origin main
