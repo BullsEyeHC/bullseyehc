@@ -89,6 +89,16 @@
 .visual-grid .site-visual.editorial-visual img[src="bullseye_build_right_team_no_text.webp"]{transform:scale(1.10)}
 .visual-grid .site-visual.editorial-visual img[src="bullseye_precision_meets_people_no_text.webp"]{transform:scale(1.055)}
 @media(max-width:850px){.visual-grid .site-visual.editorial-visual{aspect-ratio:5/4}}
+
+/* Source-image correction: both assets contain a sharp central 2:1 scene with blurred padding above and below.
+   Show only the sharp scene; retain full horizontal composition. */
+.visual-grid .site-visual.editorial-visual{aspect-ratio:1.96 / 1;overflow:hidden;border-radius:5px}
+.visual-grid .site-visual.editorial-visual img[src="bullseye_build_right_team_no_text.webp"],
+.visual-grid .site-visual.editorial-visual img[src="bullseye_precision_meets_people_no_text.webp"]{
+ position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;
+ object-fit:cover;object-position:center;transform:none;aspect-ratio:auto;border:0;border-radius:0;box-shadow:none
+}
+@media(max-width:850px){.visual-grid .site-visual.editorial-visual{aspect-ratio:1.96 / 1}}
 </style>
 </head>
 <body>
