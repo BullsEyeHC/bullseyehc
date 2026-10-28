@@ -111,6 +111,15 @@
   border:0 !important;box-shadow:none !important;border-radius:5px !important;
 }
 @media(max-width:850px){.visual-grid figure.editorial-visual{max-width:100%;aspect-ratio:1/1 !important}}
+
+/* Preserve each final image's native proportions (square + landscape) without distortion. */
+.visual-grid figure.editorial-visual{aspect-ratio:auto !important;height:auto !important}
+.visual-grid figure.editorial-visual img[src="bullseye_build_right_team_FINAL.webp"],
+.visual-grid figure.editorial-visual img[src="bullseye_precision_meets_people_FINAL.webp"]{
+ aspect-ratio:auto !important;object-fit:contain !important;height:auto !important;
+ position:static !important;inset:auto !important;transform:none !important;
+ width:100% !important;max-width:100% !important;margin:0 !important;
+}
 </style>
 </head>
 <body>
