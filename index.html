@@ -49,7 +49,7 @@
 
 
 /* Final targeted crop: remove the white pixel strip on Build the Right Team. */
-.site-visual.editorial-visual img[src="bullseye_build_right_team_no_text.webp"]{width:106%;max-width:none;margin-left:-3%;height:auto;border-radius:0;box-shadow:none;display:block}
+.site-visual.editorial-visual img[src="bullseye_build_right_team_FINAL.webp"]{width:106%;max-width:none;margin-left:-3%;height:auto;border-radius:0;box-shadow:none;display:block}
 
 /* BullsEye final image composition: stronger hero and text-free editorial artwork */
 .hero .hero-visual-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);align-items:center;gap:36px}
@@ -63,7 +63,7 @@
 .visual-grid .editorial-visual{max-width:none;width:100%;overflow:hidden;border-radius:7px}
 .visual-grid .editorial-visual img,
 .site-visual.editorial-visual img[src="bullseye_build_right_team_no_text.webp"],
-.site-visual.editorial-visual img[src="bullseye_precision_meets_people_no_text.webp"]{width:100%;max-width:100%;margin:0;transform:none;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:7px;box-shadow:none}
+.site-visual.editorial-visual img[src="bullseye_precision_meets_people_FINAL.webp"]{width:100%;max-width:100%;margin:0;transform:none;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:7px;box-shadow:none}
 @media(max-width:850px){
 .hero .hero-visual-layout{grid-template-columns:1fr;gap:28px}
 .hero-image img{height:300px}
@@ -100,6 +100,17 @@
 }
 @media(max-width:850px){.visual-grid .site-visual.editorial-visual{aspect-ratio:1.96 / 1}}
 
+
+/* Final approved source files — preserve the full square artwork, no cropping */
+.visual-grid figure.editorial-visual{width:100%;max-width:580px;aspect-ratio:1/1 !important;position:relative;overflow:hidden;border-radius:5px}
+.visual-grid figure.editorial-visual img[src="bullseye_build_right_team_FINAL.webp"],
+.visual-grid figure.editorial-visual img[src="bullseye_precision_meets_people_FINAL.webp"]{
+  position:static !important;display:block !important;width:100% !important;height:auto !important;
+  max-width:100% !important;margin:0 !important;transform:none !important;
+  aspect-ratio:1/1 !important;object-fit:contain !important;object-position:center !important;
+  border:0 !important;box-shadow:none !important;border-radius:5px !important;
+}
+@media(max-width:850px){.visual-grid figure.editorial-visual{max-width:100%;aspect-ratio:1/1 !important}}
 </style>
 </head>
 <body>
