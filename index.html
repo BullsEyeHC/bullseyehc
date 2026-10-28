@@ -19,6 +19,11 @@
     @media(max-width:620px){.logo{width:245px}.about{grid-template-columns:1fr;gap:28px}.portrait-wrap,.portrait{width:170px}.portrait{height:auto}.client-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.navin{min-height:84px}.links .btn{padding:0 12px;min-height:40px}.hero{padding:72px 0 64px}section{padding:68px 0}.credgrid{grid-template-columns:1fr}.creditem{border-right:0;border-bottom:1px solid var(--line)!important}.creditem:last-child{border-bottom:0!important}.expert-card ul{columns:1}.foot{flex-direction:column;align-items:flex-start}}
   
+
+/* Hide thin bright edge artifacts baked into the two editorial images. */
+.editorial-visual{overflow:hidden;border-radius:6px}
+.editorial-visual img{width:102%;max-width:none;height:auto;margin-left:-1%;transform:none;border:0}
+
 /* Editorial image placements */
 .site-visual{margin:0;overflow:hidden;background:#111722}
 .site-visual img{display:block;width:100%;height:auto}
