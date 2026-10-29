@@ -167,6 +167,13 @@
 @media(max-width:800px){.proof-layout{grid-template-columns:1fr}.proof-voices{position:static}.proof-quotes{min-height:0}.proof-list li{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:12px}}
 @media(max-width:480px){.proof-list li{grid-template-columns:1fr;gap:3px}.proof-voices{padding:21px 18px}.proof-quote blockquote{font-size:16px}}
 
+
+/* Short, rotating proof points; full attributed testimonials remain below. */
+.proof-voices .proof-quotes{min-height:155px;display:flex;align-items:center;padding:18px 0 12px}
+.proof-voices .proof-quote blockquote{font-size:clamp(22px,2.3vw,29px);line-height:1.4;letter-spacing:-.02em;font-weight:650;margin:0}
+.proof-voices .proof-quote{width:100%}
+@media(max-width:800px){.proof-voices .proof-quotes{min-height:135px}}
+@media(max-width:480px){.proof-voices .proof-quote blockquote{font-size:22px}}
 </style>
   <meta name="google-site-verification" content="sUNjDAYqHyNQ7dhu_2jb8Uwtg4Mk0E616WbYqFRtvyE" />
 </head>
@@ -199,18 +206,30 @@
 <a class="btn red" href="#contact">Discuss a critical hire</a>
 </div>
 <aside class="proof-voices" aria-labelledby="proof-voices-title">
-<div class="proof-voices-heading"><div class="eyebrow">In their own words</div><h3 id="proof-voices-title">Client &amp; partner feedback</h3></div>
-<div class="proof-quotes"><figure class="proof-quote" data-quote><blockquote>“Jack has consistently proven to be an invaluable asset in helping us fill some of the most challenging and unique technology roles. His ability to understand the specific needs of our business, combined with his talent for finding the right candidates for highly specialized positions, is truly impressive.”</blockquote><figcaption><strong>Alejandro Navarro</strong><span>President / CIO / CTO / COO</span></figcaption></figure>
-<figure class="proof-quote" hidden data-quote><blockquote>“Jack Ponte was instrumental in helping us recruit top engineering talent for our cybersecurity startup. He quickly understood the requirements for complex roles and was dedicated to finding the perfect fit, even for the most challenging positions. Thanks to his efforts, we built a high-performing engineering team.”</blockquote><figcaption><strong>Kevin Oerton</strong><span>CEO &amp; Co-Founder</span></figcaption></figure>
-<figure class="proof-quote" hidden data-quote><blockquote>“Jack is one of the best IT recruiters I have worked with. He takes the time to get to know the company’s culture, the role in detail and conducts extensive screening. By the time we see resumes, the first round of interviews is essentially complete, saving us a great deal of time.”</blockquote><figcaption><strong>Adela Doyle</strong><span>General Manager &amp; Head of Global Recruitment</span></figcaption></figure>
-<figure class="proof-quote" hidden data-quote><blockquote>“Jack’s amazing – he takes the time to really understand your requirements and then goes out and finds the best people to fit your needs. Easily the best recruiter I’ve ever worked with.”</blockquote><figcaption><strong>Don Kittle</strong><span>VP Engineering</span></figcaption></figure>
-<figure class="proof-quote" hidden data-quote><blockquote>“Jack is the recruiter that you dream of finding if you are part of a growing organization. He finds good people and finds them fast – no combing through hundreds of resumes to find just the right person. Great skills with great references are the only people he delivers.”</blockquote><figcaption><strong>Ilana Sprongl</strong><span>Executive &amp; Leadership Coach</span></figcaption></figure>
-<figure class="proof-quote" hidden data-quote><blockquote>“One of the most driven and ethical recruiters I’ve come across. Jack takes the time to truly understand both the technical and cultural needs of each role, and he approaches recruitment as a partnership, not a transaction.”</blockquote><figcaption><strong>Sanjay Arasaratnam</strong><span>Head of Customer Success</span></figcaption></figure></div>
+<div class="proof-voices-heading"><div class="eyebrow">In their own words</div><h3 id="proof-voices-title">What people say about Jack</h3></div>
+<div class="proof-quotes" aria-live="off"><figure class="proof-quote" data-quote><blockquote>“an invaluable asset”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“instrumental in helping us recruit top engineering talent”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“one of the best IT recruiters I have worked with”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“Easily the best recruiter I’ve ever worked with.”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“the recruiter that you dream of finding”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“One of the most driven and ethical recruiters I’ve come across.”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“some of the most challenging and unique technology roles”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“He quickly understood the requirements for complex roles”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“saving us a great deal of time.”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“really understand your requirements”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“He finds good people and finds them fast”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“the technical and cultural needs of each role”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“finding the right candidates for highly specialized positions”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“we built a high-performing engineering team.”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“the first round of interviews is essentially complete”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“finds the best people to fit your needs.”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“Great skills with great references”</blockquote></figure>
+<figure class="proof-quote" hidden data-quote><blockquote>“a partnership, not a transaction.”</blockquote></figure></div>
 <div class="proof-controls"><button type="button" data-proof-prev aria-label="Previous testimonial">&#8592;</button>
-<span data-proof-count aria-label="Testimonial 1 of 6">01 / 06</span>
+<span data-proof-count aria-label="Snippet 1 of 18">01 / 18</span>
 <button type="button" data-proof-next aria-label="Next testimonial">&#8594;</button>
 <button type="button" data-proof-pause aria-pressed="false" aria-label="Pause automatic testimonial rotation">Pause</button></div>
-<p class="proof-source">Verified testimonials already published on this website. Feedback is not tied to a particular placement listed here. <a href="#testimonials">Read all testimonials</a>.</p>
+<p class="proof-source">Short, verbatim excerpts from the real testimonials below. Not tied to individual placements. <a href="#testimonials">Read the full recommendations</a>.</p>
 </aside>
 </div></div></section>
 <section class="visual-section tint"><div class="wrap visual-grid reverse"><figure class="site-visual editorial-visual"><img src="bullseye_precision_meets_people_FINAL.webp" alt="Where precision meets people — technical search focused on the right person." width="900" height="900" loading="lazy" decoding="async"></figure><div class="visual-copy"><div class="eyebrow">The BullsEye! approach</div><h2>Where precision meets people.</h2><p>Better search starts with understanding the work, the people and what success actually looks like.</p></div></div></section>
@@ -238,11 +257,11 @@ function render(value){
 index=(value+slides.length)%slides.length;
 slides.forEach(function(el,n){el.hidden=n!==index;});
 count.textContent=String(index+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
-count.setAttribute("aria-label","Testimonial "+(index+1)+" of "+slides.length);
+count.setAttribute("aria-label","Snippet "+(index+1)+" of "+slides.length);
 }
 function schedule(){
 if(clock!==null){clearInterval(clock);clock=null;}
-if(!paused&&!document.hidden){clock=setInterval(function(){render(index+1);},9000);}
+if(!paused&&!document.hidden){clock=setInterval(function(){render(index+1);},5500);}
 }
 function step(n){render(index+n);schedule();}
 prev.addEventListener("click",function(){step(-1);});
