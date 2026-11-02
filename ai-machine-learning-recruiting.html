@@ -107,11 +107,16 @@ footer{padding:30px 0;color:#858d9d;font-size:12px}
 @media(max-width:950px){.logo{width:300px}.split,.cardgrid,.pairs,.steps{grid-template-columns:1fr}.split{gap:22px}}
 @media(max-width:700px){.links a:not(.btn){display:none}.logo{width:245px}}
 @media(max-width:550px){.wrap{width:calc(100% - 28px)}.navin{min-height:84px}.logo{width:210px}.links .btn{padding:10px 12px;min-height:40px}.hero{padding:62px 0}.hero p{font-size:17px}section{padding:62px 0}.foot{flex-direction:column;align-items:flex-start}}
+
+/* Related specialties navigation and stable logo dimensions. */
+.specialties-footer{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;line-height:1.6}
+.specialties-footer strong{color:#aeb5c4;font-weight:700}
+.specialties-footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap navin">
-<a href="/" aria-label="BullsEye! homepage"><img class="logo" src="/bullseye-transparent-approved.png" alt="BullsEye! Human Capital Solutions Inc."></a>
+<a href="/" aria-label="BullsEye! homepage"><img class="logo" src="/bullseye-transparent-approved.png" alt="BullsEye! Human Capital Solutions Inc." width="1200" height="400"></a>
 <nav class="links" aria-label="Main navigation"><a href="/#expertise">Technical Expertise</a><a href="/#process">How We Work</a><a class="btn red" href="#contact">Talk to Jack</a></nav>
 </div></header>
 <main>
@@ -165,7 +170,9 @@ footer{padding:30px 0;color:#858d9d;font-size:12px}
 <p class="email">Direct email: <a href="mailto:jponte@bullseyehc.com">jponte@bullseyehc.com</a></p>
 </div></section>
 </main>
-<footer><div class="wrap foot"><div>© 2026 BullsEye! Human Capital Solutions Inc.</div><div><a href="/">Home</a> · Where precision meets people.</div></div></footer>
+<footer><div class="wrap foot"><div>© 2026 BullsEye! Human Capital Solutions Inc.</div><div><a href="/">Home</a> · Where precision meets people.</div></div>
+<nav class="wrap specialties-footer" aria-label="More technical recruiting specialties"><strong>Explore other specialties:</strong> <a href="/technical-executive-search.html">CTO &amp; technology executive search</a> · <a href="/software-engineering-recruiting.html">Software engineering</a> · <a href="/data-engineering-analytics-recruiting.html">Data engineering</a> · <a href="/cloud-infrastructure-recruiting.html">Cloud &amp; infrastructure</a> · <a href="/cybersecurity-recruiting.html">Cybersecurity</a> · <a href="/ot-security-recruiting.html">OT / ICS security</a></nav>
+</footer>
 <script src="/contact-options.js" defer></script>
 </body>
 </html>
